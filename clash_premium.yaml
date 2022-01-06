@@ -25,7 +25,7 @@ proxy-providers:
             interval: 300
     guagua_ss:
         type: http
-        path: ""#./guagua_ss.yaml
+        path: ./gua_ss.yaml
         url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fsubscribe.a9b.top%2Flink%2FqxbSc0AV3UKjyq06%3Fclash%3D1&insert=false&include=%F0%9F%8C%8F%7C%F0%9F%87%AD%F0%9F%87%B0&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
         health-check:
             enable: true
