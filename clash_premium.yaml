@@ -12,10 +12,37 @@ log-level: silent
 external-controller: '0.0.0.0:9090'
 secret: ''
 proxy-providers:
-    jiji:
+    clash_jj_mntech:
         type: http
         path: ./clash_jj_mntech.yaml
         url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/clash_jj_mntech.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
+        interval: 3600
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+    guagua_ss:
+        type: http
+        path: ./guagua_ss.yaml
+        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/guagua_ss.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
+        interval: 3600
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+    yiyou_clash:
+        type: http
+        path: ./yiyou_clash.yaml
+        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/yiyou_clash.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
+        interval: 3600
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+    stt_mntech:
+        type: http
+        path: ./yiyou_clash.yaml
+        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/stt_mntech.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
         interval: 3600
         health-check:
             enable: true
@@ -30,7 +57,7 @@ proxy-groups:
   - name: jj_Proxy
     type: url-test
     use:
-      - jiji
+      - clash_jj_mntech
     # proxies:
     #   - jiji
     url: 'http://www.gstatic.com/generate_204'
