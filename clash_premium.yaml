@@ -53,6 +53,9 @@ proxy-groups:
     type: select
     proxies:
       - 🐤几鸡
+      - 🐸呱呱
+      - 🪶翼游
+      - 🦌STT
       - DIRECT
 
   - name: 🐤几鸡
@@ -82,7 +85,7 @@ proxy-groups:
       - stt_mntech
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
-    
+
 rule-providers:
   reject:
     type: http
