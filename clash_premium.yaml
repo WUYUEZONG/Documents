@@ -52,16 +52,37 @@ proxy-groups:
   - name: ✈️节点选择
     type: select
     proxies:
-      - jj_Proxy
+      - 🐤几鸡
       - DIRECT
-  - name: jj_Proxy
+
+  - name: 🐤几鸡
     type: url-test
     use:
       - clash_jj_mntech
-    # proxies:
-    #   - jiji
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
+
+  - name: 🐸呱呱
+    type: url-test
+    use:
+      - guagua_ss
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  - name: 🪶翼游
+    type: url-test
+    use:
+      - yiyou_clash
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  - name: 🦌STT
+    type: url-test
+    use:
+      - stt_mntech
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    
 rule-providers:
   reject:
     type: http
