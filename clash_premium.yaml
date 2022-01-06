@@ -1,7 +1,9 @@
 #
 # mine clash rules
 #
-
+#https://WUYUEZONG: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@github.com/WUYUEZONG/Documents/blob/master/clash_jj_mntech.yaml?token
+#https://raw.githubusercontent.com/WUYUEZONG/Documents/master/clash_jj_mntech.yaml?token=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
+#https://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@raw.githubusercontent.com/WUYUEZONG/Documents/master/clash_jj_mntech.yaml
 
 port: 7890
 socks-port: 7891
@@ -15,7 +17,7 @@ proxy-providers:
     clash_jj_mntech:
         type: http
         path: ./clash_jj_mntech.yaml
-        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/clash_jj_mntech.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
+        url: https://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@raw.githubusercontent.com/WUYUEZONG/Documents/master/clash_jj_mntech.yaml
         interval: 3600
         health-check:
             enable: true
@@ -24,7 +26,7 @@ proxy-providers:
     guagua_ss:
         type: http
         path: ./guagua_ss.yaml
-        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/guagua_ss.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
+        url: https://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@raw.githubusercontent.com/WUYUEZONG/Documents/master/guagua_ss.yaml
         interval: 3600
         health-check:
             enable: true
@@ -33,7 +35,7 @@ proxy-providers:
     yiyou_clash:
         type: http
         path: ./yiyou_clash.yaml
-        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/yiyou_clash.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
+        url: https://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@raw.githubusercontent.com/WUYUEZONG/Documents/master/yiyou_clash.yaml
         interval: 3600
         health-check:
             enable: true
@@ -41,8 +43,8 @@ proxy-providers:
             interval: 300
     stt_mntech:
         type: http
-        path: ./yiyou_clash.yaml
-        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/stt_mntech.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
+        path: ./stt_mntech.yaml
+        url: https://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@raw.githubusercontent.com/WUYUEZONG/Documents/master/stt_mntech.yaml
         interval: 3600
         health-check:
             enable: true
