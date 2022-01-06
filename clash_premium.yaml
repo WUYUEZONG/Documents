@@ -15,7 +15,7 @@ proxy-providers:
     jiji:
         type: http
         path: ./clash_jj_mntech.yaml
-        url: https://www.icloud.com.cn/iclouddrive/0c2tre3rIH_y6rXbPeATfNGPw#clash_jj_mntech
+        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/clash_jj_mntech.yaml?token=AEX7W577OBGIBHLMXQD237DB22VNW
         interval: 3600
         health-check:
             enable: true
@@ -29,8 +29,10 @@ proxy-groups:
       - DIRECT
   - name: jj_Proxy
     type: url-test
-    proxies:
+    use:
       - jiji
+    # proxies:
+    #   - jiji
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 rule-providers:
@@ -140,7 +142,7 @@ rules:
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
   - RULE-SET,google,DIRECT
-  - RULE-SET,proxy,PROXY
+  - RULE-SET,proxy,✈️节点选择
   - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
