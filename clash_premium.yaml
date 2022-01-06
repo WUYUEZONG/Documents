@@ -45,7 +45,7 @@ proxy-providers:
     sst_mntech:
         type: http
         path: ./sst_mntech.yaml
-        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/master/sst_mntech.yaml
+        url: https://raw.githubusercontent.com/WUYUEZONG/Documents/d/sst_mntech.yaml
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
@@ -84,7 +84,7 @@ proxy-groups:
   - name: 🦌STT
     type: url-test
     use:
-      - stt_mntech
+      - sst_mntech
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
