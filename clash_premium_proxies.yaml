@@ -1,0 +1,469 @@
+proxies:
+  -
+    name: 01.『ChinaG』几鸡-学习助理
+    type: ssr
+    server: yqy2321.china-cdn-net.com
+    port: 2321
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: '02.官网：http://a.luxury'
+    type: ssr
+    server: yqy2322.china-cdn-net.com
+    port: 2322
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 03.公益等级線路嚴格限速
+    type: ssr
+    server: yqy2323.china-cdn-net.com
+    port: 2323
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 04.捐赠解锁更多协议线路
+    type: ssr
+    server: yqy2324.china-cdn-net.com
+    port: 2324
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 05.包括V2ray和Trojan
+    type: ssr
+    server: yqy2325.china-cdn-net.com
+    port: 2325
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 06.中继中转隧道线路覆盖
+    type: ssr
+    server: yqy2326.china-cdn-net.com
+    port: 2326
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 07.长期套餐覆盖IPLC专线
+    type: ssr
+    server: yqy2327.china-cdn-net.com
+    port: 2327
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: '08.官网：http://j05.space'
+    type: ssr
+    server: yqy2328.china-cdn-net.com
+    port: 2328
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 31.『ChinaG』几鸡-学习助理
+    type: vmess
+    server: yqy2331.china-cdn-net.com
+    port: 2331
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy2331.china-cdn-net.com
+  -
+    name: '32.官网：http://a.luxury'
+    type: vmess
+    server: yqy2332.china-cdn-net.com
+    port: 2332
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy2332.china-cdn-net.com
+  -
+    name: 33.公益等级線路嚴格限速
+    type: vmess
+    server: yqy2333.china-cdn-net.com
+    port: 2333
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy2333.china-cdn-net.com
+  -
+    name: 34.捐赠解锁更多协议线路
+    type: vmess
+    server: yqy2334.china-cdn-net.com
+    port: 2334
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy2334.china-cdn-net.com
+  -
+    name: 35.包括V2ray和Trojan
+    type: vmess
+    server: yqy2335.china-cdn-net.com
+    port: 2335
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy2335.china-cdn-net.com
+  -
+    name: 36.中继中转隧道线路覆盖
+    type: vmess
+    server: yqy2336.china-cdn-net.com
+    port: 2336
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy2336.china-cdn-net.com
+  -
+    name: 37.长期套餐覆盖IPLC专线
+    type: vmess
+    server: yqy2337.china-cdn-net.com
+    port: 2337
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy2337.china-cdn-net.com
+  -
+    name: '38.官网：http://j05.space'
+    type: vmess
+    server: yqy2338.china-cdn-net.com
+    port: 2338
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy2338.china-cdn-net.com
+  -
+    name: 'I.TW.高雄.龍抬頭⇠HiNet:RC33127'
+    type: ssr
+    server: yqy33127.china-cdn-net.com
+    port: 33127
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.TW.高雄.龍抬頭⇠HiNet:RC33128'
+    type: ssr
+    server: yqy33128.china-cdn-net.com
+    port: 33128
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.TW.高雄.龍抬頭⇠HiNet:VC33137'
+    type: vmess
+    server: yqy33137.china-cdn-net.com
+    port: 33137
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy33137.china-cdn-net.com
+  -
+    name: 'I.TW.高雄.龍抬頭⇠HiNet:VC33138'
+    type: vmess
+    server: yqy33138.china-cdn-net.com
+    port: 33138
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy33138.china-cdn-net.com
+  -
+    name: 'I.[6倍].HK.HKT⇠BGP:RC36124'
+    type: ssr
+    server: yqy36124.china-cdn-net.com
+    port: 36124
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.[6倍].HK.HKT⇠BGP:RC36224'
+    type: ssr
+    server: yqy36224.china-cdn-net.com
+    port: 36224
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.[6倍].HK.HKT⇠BGP:RC36324'
+    type: ssr
+    server: yqy36324.china-cdn-net.com
+    port: 36324
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.[6倍].HK.HKT⇠BGP:RC36424'
+    type: ssr
+    server: yqy36424.china-cdn-net.com
+    port: 36424
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.[6倍].HK.HKT⇠BGP:VC36134'
+    type: vmess
+    server: yqy36134.china-cdn-net.com
+    port: 36134
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy36134.china-cdn-net.com
+  -
+    name: 'I.[6倍].HK.HKT⇠BGP:VC36234'
+    type: vmess
+    server: yqy36234.china-cdn-net.com
+    port: 36234
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy36234.china-cdn-net.com
+  -
+    name: 'I.[6倍].HK.HKT⇠BGP:VC36334'
+    type: vmess
+    server: yqy36334.china-cdn-net.com
+    port: 36334
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy36334.china-cdn-net.com
+  -
+    name: 'I.[6倍].HK.HKT⇠BGP:VC36434'
+    type: vmess
+    server: yqy36434.china-cdn-net.com
+    port: 36434
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy36434.china-cdn-net.com
+  -
+    name: 'I.[6倍]TW.台北⇠HiNet:RC31127'
+    type: ssr
+    server: yqy31127.china-cdn-net.com
+    port: 31127
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.[6倍]TW.台北⇠HiNet:RC31128'
+    type: ssr
+    server: yqy31128.china-cdn-net.com
+    port: 31128
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.[6倍]TW.台北⇠HiNet:VC31137'
+    type: vmess
+    server: yqy31137.china-cdn-net.com
+    port: 31137
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy31137.china-cdn-net.com
+  -
+    name: 'I.[6倍]TW.台北⇠HiNet:VC31138'
+    type: vmess
+    server: yqy31138.china-cdn-net.com
+    port: 31138
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy31138.china-cdn-net.com
+  -
+    name: 'I.[6倍]TW.彰化⇠HiNet:RC32127'
+    type: ssr
+    server: yqy32127.china-cdn-net.com
+    port: 32127
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.[6倍]TW.彰化⇠HiNet:RC32128'
+    type: ssr
+    server: yqy32128.china-cdn-net.com
+    port: 32128
+    cipher: aes-256-cfb
+    password: 'http://cc.ax/'
+    protocol: auth_aes128_md5
+    protocolparam: '1722383:TAQcrM'
+    protocol-param: '1722383:TAQcrM'
+    obfs: plain
+    obfsparam: data.bilibili.com/f1d811722383
+    obfs-param: data.bilibili.com/f1d811722383
+  -
+    name: 'I.[6倍]TW.彰化⇠HiNet:VC32137'
+    type: vmess
+    server: yqy32137.china-cdn-net.com
+    port: 32137
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy32137.china-cdn-net.com
+  -
+    name: 'I.[6倍]TW.彰化⇠HiNet:VC32138'
+    type: vmess
+    server: yqy32138.china-cdn-net.com
+    port: 32138
+    uuid: b89f11eb-dbe9-349a-bb16-f4481cd96c1b
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /iso
+    ws-headers:
+      Host: yqy32138.china-cdn-net.com
