@@ -98,80 +98,109 @@ dns:
 
 secret: ''
 proxy-providers:
+    # https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+    # all_in_one:
+    #     type: http
+    #     path: ./providers.yaml
+    #     url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+    #     interval: 3600
+    #     health-check:
+    #         enable: true
+    #         url: http://www.gstatic.com/generate_204
+    #         interval: 300
     # proxy all
     gua_all:
+        # type: file
+        # path: ./providers.yaml
         type: http
-        path: ./gua_all.yaml
-        url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
+        path: ./providers.yaml
+        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
         interval: 3600
+        filter: 'v1'
+        # url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
+        # interval: 3600
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
 
     yiyo_all:
+        # type: file
+        # path: ./providers.yaml
         type: http
-        path: ./yiyo_all.yaml
-        url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
+        path: ./providers.yaml
+        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
         interval: 3600
+        filter: '台湾-中继|新加坡-中继|韩国-中继'
+        # url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
+        # interval: 3600
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
 
     stt_all:
+        # type: file
+        # path: ./providers.yaml
         type: http
-        path: ./stt_all.yaml
-        url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
+        path: ./providers.yaml
+        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
         interval: 3600
+        filter: '香港 [A-C]|台湾 [A-C]'
+        # url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
+        # interval: 3600
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
 
     jj_faster:
+        # type: file
+        # path: ./providers.yaml
         type: http
-        path: ./jj_fliter.yaml
-        url: https://a.luxury/link/o4PGAk2vGIzZuLCW?clash=2
+        path: ./providers.yaml
+        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
         interval: 3600
+        # url: https://a.luxury/link/o4PGAk2vGIzZuLCW?clash=2
+        # interval: 3600
         filter: 'BGP|HiNet'
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
 
-    gua_faster:
-        type: http
-        path: ./gua_fliter.yaml
-        url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
-        interval: 3600
-        filter: '亚洲|香港'
-        health-check:
-            enable: true
-            url: http://www.gstatic.com/generate_204
-            interval: 300
+    # gua_faster:
+    #     type: http
+    #     path: ./gua_fliter.yaml
+    #     url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
+    #     interval: 3600
+    #     filter: '亚洲|香港'
+    #     health-check:
+    #         enable: true
+    #         url: http://www.gstatic.com/generate_204
+    #         interval: 300
 
-    yiyo_faster:
-        type: http
-        path: ./yiyou_fliter.yaml
-        url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
-        interval: 3600
-        filter: '台湾-中继|新加坡-中继|韩国-中继'
-        health-check:
-            enable: true
-            url: http://www.gstatic.com/generate_204
-            interval: 300
+    # yiyo_faster:
+    #     type: http
+    #     path: ./yiyou_fliter.yaml
+    #     url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
+    #     interval: 3600
+    #     filter: '台湾-中继|新加坡-中继|韩国-中继'
+    #     health-check:
+    #         enable: true
+    #         url: http://www.gstatic.com/generate_204
+    #         interval: 300
 
-    stt_faster:
-        type: http
-        path: ./stt_fliter.yaml
-        url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
-        interval: 3600
-        filter: '香港 [A-C]|台湾 [A-C]'
-        health-check:
-            enable: true
-            url: http://www.gstatic.com/generate_204
-            interval: 300
+    # stt_faster:
+    #     type: http
+    #     path: ./stt_fliter.yaml
+    #     url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
+    #     interval: 3600
+    #     filter: '香港 [A-C]|台湾 [A-C]'
+    #     health-check:
+    #         enable: true
+    #         url: http://www.gstatic.com/generate_204
+    #         interval: 300
     #local proxy
     # hk:
     #     type: http
@@ -241,8 +270,10 @@ proxy-groups:
     type: url-test
     use:
       - jj_faster
-      - yiyo_faster
-      - stt_faster
+      - yiyo_all
+      - stt_all
+      # - yiyo_faster
+      # - stt_faster
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -259,7 +290,8 @@ proxy-groups:
   - name: 🐸呱呱自动
     type: url-test
     use:
-      - gua_faster
+      # - gua_faster
+      - gua_all
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -271,7 +303,8 @@ proxy-groups:
   - name: 🪶翼游自动
     type: url-test
     use:
-      - yiyo_faster
+      # - yiyo_faster
+      - yiyo_all
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -283,7 +316,8 @@ proxy-groups:
   - name: 🦌STT自动
     type: url-test
     use:
-      - stt_faster
+      # - stt_faster
+      - stt_all
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
