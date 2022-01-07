@@ -53,11 +53,21 @@ proxy-groups:
   - name: ✈️节点选择
     type: select
     proxies:
+      - 🌍全局自动选择
       - 🐤几鸡
       - 🐸呱呱
       - 🪶翼游
       - 🦌STT
       - DIRECT
+
+  - name: 🌍全局自动选择
+    type: url-test
+    use:
+      - clash_jj_mntech
+      - yiyou_clash
+      - sst_mntech
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
 
   - name: 🐤几鸡
     type: url-test
