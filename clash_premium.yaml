@@ -138,7 +138,7 @@ proxy-providers:
             interval: 300
 
     gua_faster:
-        type: http
+        type: file
         path: ./gua_fliter.yaml
         use:
             - yiyo_all
