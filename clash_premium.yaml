@@ -68,7 +68,6 @@ proxy-providers:
     stt_faster:
         type: file
         path: ./stt_fliter.yaml
-        # url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1 
         use:
             - stt_all
         filter: '香港 [A-C]|台湾 [A-C]'
