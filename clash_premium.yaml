@@ -141,7 +141,7 @@ proxy-providers:
         type: file
         path: ./gua_fliter.yaml
         use:
-            - yiyo_all
+            - gua_all
         filter: '亚洲|香港'
 
     yiyo_faster:
