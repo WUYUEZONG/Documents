@@ -103,6 +103,7 @@ proxy-providers:
         type: http
         path: ./gua_all.yaml
         url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
+        interval: 3600
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
@@ -112,6 +113,7 @@ proxy-providers:
         type: http
         path: ./yiyo_all.yaml
         url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
+        interval: 3600
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
@@ -121,6 +123,7 @@ proxy-providers:
         type: http
         path: ./stt_all.yaml
         url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
+        interval: 3600
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
@@ -138,76 +141,87 @@ proxy-providers:
             interval: 300
 
     gua_faster:
-        type: file
+        type: http
         path: ./gua_fliter.yaml
-        use:
-            - gua_all
+        url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
+        interval: 3600
         filter: '亚洲|香港'
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
 
     yiyo_faster:
-        type: file
+        type: http
         path: ./yiyou_fliter.yaml
-        use:
-            - yiyo_all
+        url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
+        interval: 3600
         filter: '台湾-中继|新加坡-中继|韩国-中继'
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
 
     stt_faster:
-        type: file
+        type: http
         path: ./stt_fliter.yaml
-        use:
-            - stt_all
+        url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
+        interval: 3600
         filter: '香港 [A-C]|台湾 [A-C]'
-
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
     #local proxy
-    hk:
-        type: file
-        path: ./hk.yaml
-        use: 
-            - jj_faster
-            - yiyo_all
-            - stt_all
-            - gua_all
-        filter: '香港'
+    # hk:
+    #     type: http
+    #     path: ./hk.yaml
+    #     use: 
+    #         - jj_faster
+    #         - yiyo_all
+    #         - stt_all
+    #         - gua_all
+    #     filter: '香港'
 
-    tw:
-        type: file
-        path: ./tw.yaml
-        use: 
-            - jj_faster
-            - yiyo_all
-            - stt_all
-            - gua_all
-        filter: '台湾'
+    # tw:
+    #     type: http
+    #     path: ./tw.yaml
+    #     use: 
+    #         - jj_faster
+    #         - yiyo_all
+    #         - stt_all
+    #         - gua_all
+    #     filter: '台湾'
 
-    us:
-        type: file
-        path: ./us.yaml
-        use: 
-            - jj_faster
-            - yiyo_all
-            - stt_all
-            - gua_all
-        filter: '美国'
+    # us:
+    #     type: http
+    #     path: ./us.yaml
+    #     use: 
+    #         - jj_faster
+    #         - yiyo_all
+    #         - stt_all
+    #         - gua_all
+    #     filter: '美国'
 
-    sg:
-        type: file
-        path: ./sg.yaml
-        use: 
-            - jj_faster
-            - yiyo_all
-            - stt_all
-            - gua_all
-        filter: '新加坡'
+    # sg:
+    #     type: http
+    #     path: ./sg.yaml
+    #     use: 
+    #         - jj_faster
+    #         - yiyo_all
+    #         - stt_all
+    #         - gua_all
+    #     filter: '新加坡'
 
-    kr:
-        type: file
-        path: ./kr.yaml
-        use: 
-            - jj_faster
-            - yiyo_all
-            - stt_all
-            - gua_all
-        filter: '韩国'
+    # kr:
+    #     type: http
+    #     path: ./kr.yaml
+    #     use: 
+    #         - jj_faster
+    #         - yiyo_all
+    #         - stt_all
+    #         - gua_all
+    #     filter: '韩国'
 
 proxy-groups:
   - name: ✈️节点选择
@@ -273,30 +287,30 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 🇭🇰香港
-    type: select
-    use:
-      - hk
+  # - name: 🇭🇰香港
+  #   type: select
+  #   use:
+  #     - hk
   
-  - name: 🇨🇳台湾
-    type: select
-    use:
-      - tw
+  # - name: 🇨🇳台湾
+  #   type: select
+  #   use:
+  #     - tw
 
-  - name: 🇸🇬新加坡
-    type: select
-    use:
-      - sg
+  # - name: 🇸🇬新加坡
+  #   type: select
+  #   use:
+  #     - sg
   
-  - name: 🇺🇸美国
-    type: select
-    use:
-      - us
+  # - name: 🇺🇸美国
+  #   type: select
+  #   use:
+  #     - us
 
-  - name: 🇰🇷韩国
-    type: select
-    use:
-      - kr
+  # - name: 🇰🇷韩国
+  #   type: select
+  #   use:
+  #     - kr
 
 rule-providers:
   #   name: # Provider 名称
@@ -367,7 +381,7 @@ rules:
   # China Area Network
   - RULE-SET,China,DIRECT
 
-  - RULE-SET,Xbox,🇺🇸美国 #🇰🇷韩国
+  # - RULE-SET,Xbox,🇺🇸美国 #🇰🇷韩国
 
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
