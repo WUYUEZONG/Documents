@@ -16,7 +16,7 @@ log-level: silent
 external-controller: '0.0.0.0:9090'
 secret: ''
 proxy-providers:
-    clash_jj_mntech:
+    jj_faster:
         type: http
         path: ./jj_fliter.yaml
         url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fa.luxury%2Flink%2Fo4PGAk2vGIzZuLCW%3Fclash%3D2&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&include=BGP%7CHiNet&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
@@ -25,7 +25,7 @@ proxy-providers:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
-    guagua_ss:
+    gua_faster:
         type: http
         path: ./gua_fliter.yaml
         url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fsubscribe.a9b.top%2Flink%2FqxbSc0AV3UKjyq06%3Fclash%3D1&insert=false&include=%F0%9F%8C%8F%7C%F0%9F%87%AD%F0%9F%87%B0&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
@@ -33,7 +33,7 @@ proxy-providers:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
-    yiyou_clash:
+    yiyo_faster:
         type: http
         path: ./yiyou_fliter.yaml
         url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fyiyocloud.com%2Flink%2FVfhPhDV3jyyNKBGD%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&include=%E5%8F%B0%E6%B9%BE-%E4%B8%AD%E7%BB%A7%7C%E6%96%B0%E5%8A%A0%E5%9D%A1-%E4%B8%AD%E7%BB%A7%7C%E9%9F%A9%E5%9B%BD-%E4%B8%AD%E7%BB%A7&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
@@ -41,7 +41,7 @@ proxy-providers:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
-    sst_mntech:
+    stt_faster:
         type: http
         path: ./stt_fliter.yaml
         url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fsttsub.xyz%2Flink%2F8mljlCLSYhy8lnjs%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&include=%E9%A6%99%E6%B8%AF%20%5BA-C%5D%7C%E5%8F%B0%E6%B9%BE%20%5BA-C%5D&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
@@ -49,53 +49,167 @@ proxy-providers:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
+# proxy all
+    gua_all:
+        type: http
+        path: ./gua_all.yaml
+        url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fsubscribe.a9b.top%2Flink%2FqxbSc0AV3UKjyq06%3Fsub%3D4&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    yiyo_all:
+        type: http
+        path: ./yiyo_all.yaml
+        url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fyiyocloud.com%2Flink%2FVfhPhDV3jyyNKBGD%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    stt_all:
+        type: http
+        path: ./stt_all.yaml
+        url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fsttsub.xyz%2Flink%2F8mljlCLSYhy8lnjs%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+#local proxy
+    hk:
+        type: http
+        path: ./hk.yaml
+        url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fa.luxury%2Flink%2Fo4PGAk2vGIzZuLCW%3Fclash%3D2%7Chttps%3A%2F%2Fsubscribe.a9b.top%2Flink%2FqxbSc0AV3UKjyq06%3Fsub%3D4%7Chttps%3A%2F%2Fsttsub.xyz%2Flink%2F8mljlCLSYhy8lnjs%3Fclash%3D1%7Chttps%3A%2F%2Fyiyocloud.com%2Flink%2FVfhPhDV3jyyNKBGD%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&include=%E9%A6%99%E6%B8%AF&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    tw:
+        type: http
+        path: ./tw.yaml
+        url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fa.luxury%2Flink%2Fo4PGAk2vGIzZuLCW%3Fclash%3D2%7Chttps%3A%2F%2Fsubscribe.a9b.top%2Flink%2FqxbSc0AV3UKjyq06%3Fsub%3D4%7Chttps%3A%2F%2Fsttsub.xyz%2Flink%2F8mljlCLSYhy8lnjs%3Fclash%3D1%7Chttps%3A%2F%2Fyiyocloud.com%2Flink%2FVfhPhDV3jyyNKBGD%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&include=%E5%8F%B0%E6%B9%BE&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    us:
+        type: http
+        path: ./us.yaml
+        url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fa.luxury%2Flink%2Fo4PGAk2vGIzZuLCW%3Fclash%3D2%7Chttps%3A%2F%2Fsubscribe.a9b.top%2Flink%2FqxbSc0AV3UKjyq06%3Fsub%3D4%7Chttps%3A%2F%2Fsttsub.xyz%2Flink%2F8mljlCLSYhy8lnjs%3Fclash%3D1%7Chttps%3A%2F%2Fyiyocloud.com%2Flink%2FVfhPhDV3jyyNKBGD%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&include=%E7%BE%8E%E5%9B%BD&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    sg:
+        type: http
+        path: ./sg.yaml
+        url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fa.luxury%2Flink%2Fo4PGAk2vGIzZuLCW%3Fclash%3D2%7Chttps%3A%2F%2Fsubscribe.a9b.top%2Flink%2FqxbSc0AV3UKjyq06%3Fsub%3D4%7Chttps%3A%2F%2Fsttsub.xyz%2Flink%2F8mljlCLSYhy8lnjs%3Fclash%3D1%7Chttps%3A%2F%2Fyiyocloud.com%2Flink%2FVfhPhDV3jyyNKBGD%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&include=%E6%96%B0%E5%8A%A0%E5%9D%A1&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    kr:
+        type: http
+        path: ./kr.yaml
+        url: https://sub.id9.cc/sub?target=clash&new_name=true&url=https%3A%2F%2Fa.luxury%2Flink%2Fo4PGAk2vGIzZuLCW%3Fclash%3D2%7Chttps%3A%2F%2Fsubscribe.a9b.top%2Flink%2FqxbSc0AV3UKjyq06%3Fsub%3D4%7Chttps%3A%2F%2Fsttsub.xyz%2Flink%2F8mljlCLSYhy8lnjs%3Fclash%3D1%7Chttps%3A%2F%2Fyiyocloud.com%2Flink%2FVfhPhDV3jyyNKBGD%3Fclash%3D1&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&include=%E9%9F%A9%E5%9B%BD&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
 proxy-groups:
   - name: ✈️节点选择
     type: select
     proxies:
       - 🌍全局自动选择
-      - 🐤几鸡
-      - 🐸呱呱
-      - 🪶翼游
-      - 🦌STT
+      - 🐤几鸡全
+      - 🐸呱呱全
+      - 🪶翼游全
+      - 🦌STT全
+      - 🐸呱呱自动
+      - 🪶翼游自动
+      - 🦌STT自动
       - DIRECT
 
   - name: 🌍全局自动选择
     type: url-test
     use:
-      - clash_jj_mntech
-      - yiyou_clash
-      - sst_mntech
+      - jj_faster
+      - yiyo_faster
+      - stt_faster
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 🐤几鸡
+  - name: 🐤几鸡全
+    type: select
+    use:
+      - jj_faster
+
+  - name: 🐸呱呱全
+    type: select
+    use:
+      - gua_all
+  
+  - name: 🐸呱呱自动
     type: url-test
     use:
-      - clash_jj_mntech
+      - gua_faster
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 🐸呱呱
+  - name: 🪶翼游全
+    type: select
+    use:
+      - yiyo_all
+
+  - name: 🪶翼游自动
     type: url-test
     use:
-      - guagua_ss
+      - yiyo_faster
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 🪶翼游
+  - name: 🦌STT全
+    type: select
+    use:
+      - stt_all
+
+  - name: 🦌STT自动
     type: url-test
     use:
-      - yiyou_clash
+      - stt_faster
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 🦌STT
-    type: url-test
+  - name: 🇭🇰香港
+    type: select
     use:
-      - sst_mntech
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
+      - hk
+  
+  - name: 🇨🇳台湾
+    type: select
+    use:
+      - tw
+
+  - name: 🇸🇬新加坡
+    type: select
+    use:
+      - sg
+  
+  - name: 🇺🇸美国
+    type: select
+    use:
+      - us
+
+  - name: 🇰🇷韩国
+    type: select
+    use:
+      - kr
 
 rule-providers:
   reject:
