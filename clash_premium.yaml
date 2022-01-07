@@ -170,7 +170,7 @@ proxy-providers:
         filter: '香港'
 
     tw:
-        type: http
+        type: file
         path: ./tw.yaml
         use: 
             - jj_faster
@@ -180,7 +180,7 @@ proxy-providers:
         filter: '台湾'
 
     us:
-        type: http
+        type: file
         path: ./us.yaml
         use: 
             - jj_faster
@@ -190,7 +190,7 @@ proxy-providers:
         filter: '美国'
 
     sg:
-        type: http
+        type: file
         path: ./sg.yaml
         use: 
             - jj_faster
@@ -200,7 +200,7 @@ proxy-providers:
         filter: '新加坡'
 
     kr:
-        type: http
+        type: file
         path: ./kr.yaml
         use: 
             - jj_faster
