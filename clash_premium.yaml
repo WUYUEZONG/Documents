@@ -57,8 +57,8 @@ dns:
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
     - 119.29.29.29
-    # - 114.114.114.114 # default value
-    # - 8.8.8.8 # default value
+    - 114.114.114.114 # default value
+    - 8.8.8.8 # default value
     # - tls://dns.rubyfish.cn:853 # DNS over TLS
     # - https://1.1.1.1/dns-query # DNS over HTTPS
     # - dhcp://en0 # dns from dhcp
@@ -98,226 +98,107 @@ dns:
 
 secret: ''
 proxy-providers:
-    # https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
-    # all_in_one:
-    #     type: http
-    #     path: ./providers.yaml
-    #     url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
-    #     interval: 3600
-    #     health-check:
-    #         enable: true
-    #         url: http://www.gstatic.com/generate_204
-    #         interval: 300
-    # proxy all
-    gua_all:
-        # type: file
-        # path: ./providers.yaml
+    
+    gua_filter:
         type: http
         path: ./providers.yaml
-        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+#        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+        url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
         interval: 3600
         filter: 'v1'
-        # url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
-        # interval: 3600
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
 
-    yiyo_all:
-        # type: file
-        # path: ./providers.yaml
+    yiyo_filter:
         type: http
         path: ./providers.yaml
-        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+#        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+        url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
         interval: 3600
-        filter: '台湾-中继|新加坡-中继|韩国-中继'
-        # url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
-        # interval: 3600
+#        filter: '台湾-中继|新加坡-中继|韩国-中继'
+        filter: '香港-中继|台湾-中继|新加坡-中继|韩国-中继'
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
 
-    stt_all:
-        # type: file
-        # path: ./providers.yaml
+    stt_filter:
         type: http
         path: ./providers.yaml
-        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+#        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+        url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
         interval: 3600
         filter: '香港 [A-C]|台湾 [A-C]'
-        # url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
-        # interval: 3600
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
 
-    jj_faster:
-        # type: file
-        # path: ./providers.yaml
+    jj_filter:
         type: http
         path: ./providers.yaml
-        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+#        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+        url: https://a.luxury/link/o4PGAk2vGIzZuLCW?clash=2
         interval: 3600
-        # url: https://a.luxury/link/o4PGAk2vGIzZuLCW?clash=2
-        # interval: 3600
         filter: 'BGP|HiNet'
         health-check:
             enable: true
             url: http://www.gstatic.com/generate_204
             interval: 300
 
-    # gua_faster:
-    #     type: http
-    #     path: ./gua_fliter.yaml
-    #     url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
-    #     interval: 3600
-    #     filter: '亚洲|香港'
-    #     health-check:
-    #         enable: true
-    #         url: http://www.gstatic.com/generate_204
-    #         interval: 300
-
-    # yiyo_faster:
-    #     type: http
-    #     path: ./yiyou_fliter.yaml
-    #     url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
-    #     interval: 3600
-    #     filter: '台湾-中继|新加坡-中继|韩国-中继'
-    #     health-check:
-    #         enable: true
-    #         url: http://www.gstatic.com/generate_204
-    #         interval: 300
-
-    # stt_faster:
-    #     type: http
-    #     path: ./stt_fliter.yaml
-    #     url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
-    #     interval: 3600
-    #     filter: '香港 [A-C]|台湾 [A-C]'
-    #     health-check:
-    #         enable: true
-    #         url: http://www.gstatic.com/generate_204
-    #         interval: 300
-    #local proxy
-    # hk:
-    #     type: http
-    #     path: ./hk.yaml
-    #     use: 
-    #         - jj_faster
-    #         - yiyo_all
-    #         - stt_all
-    #         - gua_all
-    #     filter: '香港'
-
-    # tw:
-    #     type: http
-    #     path: ./tw.yaml
-    #     use: 
-    #         - jj_faster
-    #         - yiyo_all
-    #         - stt_all
-    #         - gua_all
-    #     filter: '台湾'
-
-    # us:
-    #     type: http
-    #     path: ./us.yaml
-    #     use: 
-    #         - jj_faster
-    #         - yiyo_all
-    #         - stt_all
-    #         - gua_all
-    #     filter: '美国'
-
-    # sg:
-    #     type: http
-    #     path: ./sg.yaml
-    #     use: 
-    #         - jj_faster
-    #         - yiyo_all
-    #         - stt_all
-    #         - gua_all
-    #     filter: '新加坡'
-
-    # kr:
-    #     type: http
-    #     path: ./kr.yaml
-    #     use: 
-    #         - jj_faster
-    #         - yiyo_all
-    #         - stt_all
-    #         - gua_all
-    #     filter: '韩国'
-
 proxy-groups:
-  - name: ✈️节点选择
+  - name: ✈️ 节点选择
     type: select
     proxies:
-      - 🌍全局自动选择
-      - 🐤几鸡全
-      - 🐸呱呱全
-      - 🪶翼游全
-      - 🦌STT全
-      - 🐸呱呱自动
-      - 🪶翼游自动
-      - 🦌STT自动
+      - 🌍 全局自动选择
+      - 🐸 呱呱自动
+      - 🪶 翼游自动
+      - 🦌 STT自动
       - DIRECT
-
-  - name: 🌍全局自动选择
+      
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - DIRECT
+      - 🌍 全局自动选择
+      
+  - name: 🌍 全局自动选择
     type: url-test
     use:
-      - jj_faster
-      - yiyo_all
-      - stt_all
-      # - yiyo_faster
-      # - stt_faster
+#      - gua_filter
+      - jj_filter
+      - stt_filter
+      - yiyo_filter
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 🐤几鸡全
-    type: select
-    use:
-      - jj_faster
-
-  - name: 🐸呱呱全
-    type: select
-    use:
-      - gua_all
-  
-  - name: 🐸呱呱自动
+  - name: 🐤 几鸡自动
     type: url-test
     use:
-      # - gua_faster
-      - gua_all
+      - jj_filter
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    
+  - name: 🐸 呱呱自动
+    type: url-test
+    use:
+      - gua_filter
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 🪶翼游全
-    type: select
-    use:
-      - yiyo_all
-
-  - name: 🪶翼游自动
+  - name: 🪶 翼游自动
     type: url-test
     use:
-      # - yiyo_faster
-      - yiyo_all
+      - yiyo_filter
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 🦌STT全
-    type: select
-    use:
-      - stt_all
-
-  - name: 🦌STT自动
+  - name: 🦌 STT自动
     type: url-test
     use:
-      # - stt_faster
-      - stt_all
+      - stt_filter
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -404,13 +285,13 @@ rules:
   # Global Area Network
 
   # (Streaming Media)
-  - RULE-SET,Streaming,✈️节点选择
+  - RULE-SET,Streaming,✈️ 节点选择
 
   # (StreamingSE)
-  - RULE-SET,StreamingSE,✈️节点选择
+  - RULE-SET,StreamingSE,✈️ 节点选择
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
-  - RULE-SET,Global,✈️节点选择
+  - RULE-SET,Global,✈️ 节点选择
 
   # China Area Network
   - RULE-SET,China,DIRECT
@@ -432,4 +313,4 @@ rules:
   # GeoIP China
   - GEOIP,CN,DIRECT
 
-  - MATCH,DIRECT
+  - MATCH,🐟 漏网之鱼
