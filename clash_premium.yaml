@@ -12,23 +12,22 @@ log-level: silent
 external-controller: 9090
 proxy-providers:
 proxy-groups:
-
-        - name: 🐟 漏网之鱼 
-          type: select
-          proxies:
-            - DIRECT
-            - 🔰 选择节点
-            - REJECT
-            
-        - name: 🔰 选择节点 
-          type: select
-            
-        - name: 🛑 广告拦截
-          type: select
-          proxies:
-            - DIRECT
-            - REJECT
-            - 🔰 选择节点
+  - name: 🐟 漏网之鱼 
+    type: select
+    proxies:
+      - DIRECT
+      - 🔰 选择节点
+      - REJECT
+      
+  - name: 🔰 选择节点 
+    type: select
+      
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+      - 🔰 选择节点
 rule-providers:
   reject:
     type: http
