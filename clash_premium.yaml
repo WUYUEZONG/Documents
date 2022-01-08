@@ -25,8 +25,8 @@ proxy-groups:
   - name: 🛑 广告拦截
     type: select
     proxies:
-      - DIRECT
       - REJECT
+      - DIRECT
       - 🔰 选择节点
 rule-providers:
   reject:
@@ -145,5 +145,4 @@ rules:
   - RULE-SET,telegramcidr,🔰 选择节点
   - GEOIP,,DIRECT
   - GEOIP,CN,DIRECT
-
   - MATCH,🐟 漏网之鱼
