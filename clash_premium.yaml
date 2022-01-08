@@ -101,7 +101,7 @@ proxy-providers:
     
     gua_filter:
         type: http
-        path: ./providers.yaml
+        path: ./Mine Filters/gua_filter.yaml
 #        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
         url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
         interval: 3600
@@ -113,7 +113,7 @@ proxy-providers:
 
     yiyo_filter:
         type: http
-        path: ./providers.yaml
+        path: ./Mine Filters/yiyo_filter.yaml
 #        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
         url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
         interval: 3600
@@ -126,7 +126,7 @@ proxy-providers:
 
     stt_filter:
         type: http
-        path: ./providers.yaml
+        path: ./Mine Filters/stt_filter.yaml
 #        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
         url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
         interval: 3600
@@ -138,7 +138,7 @@ proxy-providers:
 
     jj_filter:
         type: http
-        path: ./providers.yaml
+        path: ./Mine Filters/jj_filter.yaml
 #        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
         url: https://a.luxury/link/o4PGAk2vGIzZuLCW?clash=2
         interval: 3600
