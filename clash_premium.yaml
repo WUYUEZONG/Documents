@@ -153,6 +153,7 @@ proxy-groups:
     type: select
     proxies:
       - 🌍 全局自动选择
+      - 🐤 几鸡自动
       - 🐸 呱呱自动
       - 🪶 翼游自动
       - 🦌 STT自动
