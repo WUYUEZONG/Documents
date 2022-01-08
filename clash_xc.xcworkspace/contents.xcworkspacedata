@@ -8,6 +8,9 @@
          location = "group:providers.yaml">
       </FileRef>
       <FileRef
+         location = "group:providers_kr.yaml">
+      </FileRef>
+      <FileRef
          location = "group:clash_vscode.code-workspace">
       </FileRef>
       <FileRef
