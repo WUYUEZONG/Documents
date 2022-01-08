@@ -10,39 +10,143 @@ allow-lan: false
 mode: rule
 log-level: silent
 external-controller: 127.0.0.1:9090
-dns:
-  enable: true
-  enhanced-mode: fake-ip
-  nameserver:
-    - 8.8.8.8
-    - 119.29.29.29
-    - 223.5.5.5
-    - 114.114.114.114 # 真实请求DNS，可多设置几个
-# interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
-tun:
-  enable: true
-  stack: system # 或 gvisor
-  dns-hijack: # DNS劫持设置为系统DNS
-    - 8.8.8.8
-    - 119.29.29.29
-    - 223.5.5.5
-    - 114.114.114.114 # 可任意设置，但为了保证CFW关闭后能不影响联网，建议设置真实能访问的DNS服务器
-  auto-route: true
-  auto-detect-interface: true # 自动检测出口网卡
 proxy-providers:
+    
+    gua_filter:
+        type: http
+        path: ./Mine Filters/gua_filter.yaml
+#        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+        url: https://subscribe.a9b.top/link/qxbSc0AV3UKjyq06?clash=2
+        interval: 3600
+        filter: 'v1'
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    yiyo_filter:
+        type: http
+        path: ./Mine Filters/yiyo_filter.yaml
+#        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+        url: https://yiyocloud.com/link/VfhPhDV3jyyNKBGD?clash=1
+        interval: 3600
+#        filter: '台湾-中继|新加坡-中继|韩国-中继'
+        filter: '香港-中继|台湾-中继|新加坡-中继|韩国-中继'
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    stt_filter:
+        type: http
+        path: ./Mine Filters/stt_filter.yaml
+#        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+        url: https://sttsub.xyz/link/8mljlCLSYhy8lnjs?clash=1
+        interval: 3600
+        filter: '香港 [A-C]|台湾 [A-C]'
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
+    jj_filter:
+        type: http
+        path: ./Mine Filters/jj_filter.yaml
+#        url: https://gitee.com/rn-wyz/Documents/raw/c/providers.yaml
+        url: https://a.luxury/link/o4PGAk2vGIzZuLCW?clash=2
+        interval: 3600
+        filter: 'BGP|HiNet'
+        health-check:
+            enable: true
+            url: http://www.gstatic.com/generate_204
+            interval: 300
+
 proxy-groups:
-  - name: 🐟 漏网之鱼 
+  - name: ✈️ 节点选择
+    type: select
+    proxies:
+      - 🌍 全局自动选择
+      - 🐤 几鸡自动
+      - 🐸 呱呱自动
+      - 🪶 翼游自动
+      - 🦌 STT自动
+      - DIRECT
+      
+  - name: 🐟 漏网之鱼
     type: select
     proxies:
       - DIRECT
-      - 🔰 选择节点
-      - REJECT    
-  - name: 🛑 广告拦截
+      - ✈️ 节点选择
+      
+  - name: 🔴 全球拦截
     type: select
     proxies:
-      - REJECT
       - DIRECT
-      - 🔰 选择节点
+      - ✈️ 节点选择
+      
+  - name: 🌍 全局自动选择
+    type: url-test
+    use:
+#      - gua_filter
+      - jj_filter
+      - stt_filter
+      - yiyo_filter
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  - name: 🐤 几鸡自动
+    type: url-test
+    use:
+      - jj_filter
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    
+  - name: 🐸 呱呱自动
+    type: url-test
+    use:
+      - gua_filter
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  - name: 🪶 翼游自动
+    type: url-test
+    use:
+      - yiyo_filter
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  - name: 🦌 STT自动
+    type: url-test
+    use:
+      - stt_filter
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  # - name: 🇭🇰香港
+  #   type: select
+  #   use:
+  #     - hk
+  
+  # - name: 🇨🇳台湾
+  #   type: select
+  #   use:
+  #     - tw
+
+  # - name: 🇸🇬新加坡
+  #   type: select
+  #   use:
+  #     - sg
+  
+  # - name: 🇺🇸美国
+  #   type: select
+  #   use:
+  #     - us
+
+  # - name: 🇰🇷韩国
+  #   type: select
+  #   use:
+  #     - kr
+
 rule-providers:
   reject:
     type: http
@@ -146,18 +250,19 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
-  - RULE-SET,reject,🛑 广告拦截
+  - RULE-SET,reject,🔴 全球拦截
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
   - RULE-SET,google,DIRECT
-  - RULE-SET,proxy,🔰 选择节点
+  - RULE-SET,proxy,✈️ 节点选择
   - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
-  - RULE-SET,gfw,🔰 选择节点
-  - RULE-SET,tld-not-cn,🔰 选择节点
-  - RULE-SET,greatfire,🔰 选择节点
-  - RULE-SET,telegramcidr,🔰 选择节点
+  - RULE-SET,gfw,✈️ 节点选择
+  - RULE-SET,tld-not-cn,✈️ 节点选择
+  - RULE-SET,greatfire,✈️ 节点选择
+  - RULE-SET,telegramcidr,✈️ 节点选择
   - GEOIP,,DIRECT
   - GEOIP,CN,DIRECT
+
   - MATCH,🐟 漏网之鱼
